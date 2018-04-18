@@ -40,14 +40,14 @@ io.on('connection', function(socket){
 		});
 		
 		io.emit('update', {
-		users: userService.getAllUsers();
+		users: userService.getAllUsers()
 		});
 	});
 	
 	io.on('disconnect', function(){
 		userService.removeUser(socked.id);
 		socket.broadcast.emit('update', {
-			users: userService.getAllUsers();
+			users: userService.getAllUsers()
 		});
 	});
 	
