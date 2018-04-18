@@ -63,6 +63,6 @@ devServer: {
 			ws: true
 		}
 	}
-}	
+},	
 	plugins: plugins
 };
