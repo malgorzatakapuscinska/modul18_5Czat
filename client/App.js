@@ -45,7 +45,7 @@ class App extends Component {
 			<div className={styles.App}>
 				<div className={styles.AppHeader}>
 					<div className = {styles.AppTitle}>Chat App</div>
-					<div className = {style.AppRoom}>App Room</div>
+					<div className = {styles.AppRoom}>App Room</div>
 				</div>
 				<div className = {styles.AppBoody}>
 					<UserList users={this.state.users}/>
@@ -65,7 +65,7 @@ class App extends Component {
 	}
 
 	render(){
-		return this.state.name !== '' ?this.renderlayout() : this.renderUserForm();
+		return this.state.name !== '' ?this.renderLayout() : this.renderUserForm();
 	}
 };
 

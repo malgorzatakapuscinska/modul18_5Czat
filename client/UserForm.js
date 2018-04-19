@@ -17,8 +17,7 @@ class UserForm extends Component{
 	handleChange(e){
 		const name = e.target.value;
 		this.setState({
-			
-		})
+			name: e.target.value});
 	}
 	render(){
 		return(
