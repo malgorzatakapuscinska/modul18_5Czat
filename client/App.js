@@ -52,7 +52,7 @@ class App extends Component {
 				<div className = {styles.AppBoody}>
 					<UsersList users={this.state.users}/>
 					<div className = {styles.MessageWrapper}>
-						<MessageList messages={this.state.messages}/>" +
+						<MessageList messages={this.state.messages}/>
 						<MessageForm onMessageSubmit={message => this.handleMessageSubmit(message)} name={this.state.name}/>
 					</div>
 				</div>
