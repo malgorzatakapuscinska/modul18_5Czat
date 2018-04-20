@@ -33,7 +33,7 @@ class App extends Component {
 	handleMessageSubmit(message){
 		const messages = [message, ...this.state.messages];
 		this.setState({messages});
-		socket.emitt('message', message);
+		socket.emit('message', message);
 	}
 
 	handleUserSubmit(name){

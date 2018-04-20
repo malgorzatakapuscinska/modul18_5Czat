@@ -10,7 +10,7 @@ class MessageForm extends Component{
 	}
 	
 	changeHandler(e){
-		this,setState({text: e.target.value});
+		this.setState({text: e.target.value});
 	}
 	
 	handleSubmit(e) {

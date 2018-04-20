@@ -8,10 +8,10 @@ const Message = props => {
 	</div>
 };
 
-const MessageList = props => {
-	<div className={styles.MessasgeList}>
+const MessageList = props => (
+	<div className={styles.MessageList}>
 		{
-			props.message.map((message, i) => {
+			props.messages.map((message, i) => {
 				<Message 
 					key={i}
 					from={message.from}
@@ -20,6 +20,6 @@ const MessageList = props => {
 			})
 		}
 	</div>
-};
+);
 
 export default MessageList;
