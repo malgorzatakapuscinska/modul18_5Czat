@@ -20,6 +20,8 @@ class MessageForm extends Component{
 			text: this.state.text
 		};
 		
+		console.log(message);
+		
 		this.props.onMessageSubmit(message);
 		this.setState({text: ''});
 	}

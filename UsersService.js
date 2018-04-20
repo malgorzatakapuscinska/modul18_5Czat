@@ -13,6 +13,7 @@ class UsersService {
 
 	addUser(user) {
 		this.users = [user, ...this.users];
+		console.log(this.users);
 		console.log('User added to users list.')
 	}
 

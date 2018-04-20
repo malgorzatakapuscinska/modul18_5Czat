@@ -32,13 +32,14 @@ class App extends Component {
 
 	handleMessageSubmit(message){
 		const messages = [message, ...this.state.messages];
-		this.setState({messages});
+		this.setState({messages}, () => console.log(this.state.messages) );
 		socket.emit('message', message);
 	}
 
 	handleUserSubmit(name){
 		this.setState({name});
 		socket.emit('join', name);
+		console.log(name);
 	}
 
 	renderLayout(){
@@ -49,7 +50,7 @@ class App extends Component {
 					<div className = {styles.AppTitle}>Chat App</div>
 					<div className = {styles.AppRoom}>App Room</div>
 				</div>
-				<div className = {styles.AppBoody}>
+				<div className = {styles.AppBody}>
 					<UsersList users={this.state.users}/>
 					<div className = {styles.MessageWrapper}>
 						<MessageList messages={this.state.messages}/>
