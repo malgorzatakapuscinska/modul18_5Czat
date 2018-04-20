@@ -27,6 +27,7 @@ class App extends Component {
 
 	chatUpdate(users){
 		this.setState({users});
+		console.log(this.state.users);
 	}
 
 	handleMessageSubmit(message){
@@ -41,6 +42,7 @@ class App extends Component {
 	}
 
 	renderLayout(){
+	console.log(this.state.users);
 		return (
 			<div className={styles.App}>
 				<div className={styles.AppHeader}>
@@ -48,7 +50,7 @@ class App extends Component {
 					<div className = {styles.AppRoom}>App Room</div>
 				</div>
 				<div className = {styles.AppBoody}>
-					<UserList users={this.state.users}/>
+					<UsersList users={this.state.users}/>
 					<div className = {styles.MessageWrapper}>
 						<MessageList messages={this.state.messages}/>" +
 						<MessageForm onMessageSubmit={message => this.handleMessageSubmit(message)} name={this.state.name}/>
